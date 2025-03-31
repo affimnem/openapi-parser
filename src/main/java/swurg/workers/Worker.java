@@ -166,7 +166,7 @@ public class Worker {
           Schema schema = parameter.getSchema();
           String value = Optional.ofNullable(schema)
               .map(Schema::getType)
-              .orElse(null);
+              .orElse("");
 
           if ("header".equals(in))
             httpParameters.add(HttpParameter.cookieParameter(name, value));
